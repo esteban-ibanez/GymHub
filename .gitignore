@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Configuración local (contiene contraseñas): NO se sube al repositorio
+.env
+.env.*
+!.env.example
+
+# Ficheros locales de Flask (por ejemplo, una base de datos SQLite)
+instance/
+
+# Configuración personal de Claude Code
+.claude/settings.local.json
+
+# Editores y sistema operativo
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

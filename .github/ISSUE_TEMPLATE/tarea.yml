@@ -1,0 +1,76 @@
+name: Tarea
+description: Plantilla de issue del equipo GymHub (historia de usuario, error, tarea técnica o documentación)
+title: "[WI-?][HU-?] Título corto"
+labels: ["estado:por-hacer"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Toda tarea es una issue. Pon el work item y la historia en el título y añade las etiquetas
+        `tipo:*`, `prioridad:*` y `WI-n` (el estado empieza en `estado:por-hacer`).
+        Asígnate la issue si eres el responsable.
+  - type: dropdown
+    id: work_item
+    attributes:
+      label: Work item
+      options:
+        - WI-1 Perfil y objetivos
+        - WI-2 Catálogo de ejercicios
+        - WI-3 Rutinas
+        - WI-4 Registro de sesiones
+        - WI-5 Progreso y estadísticas
+        - WI-6 Rutinas compartidas
+        - Transversal (infraestructura, documentación)
+    validations:
+      required: true
+  - type: input
+    id: historia
+    attributes:
+      label: Historia de usuario
+      description: Identificador de docs/work-items.md, por ejemplo HU-4.5. Déjalo vacío si no aplica.
+  - type: dropdown
+    id: tipo
+    attributes:
+      label: Tipo
+      options:
+        - Historia de usuario
+        - Error
+        - Tarea técnica
+        - Documentación
+    validations:
+      required: true
+  - type: dropdown
+    id: prioridad
+    attributes:
+      label: Prioridad
+      options:
+        - Alta
+        - Media
+        - Baja
+    validations:
+      required: true
+  - type: input
+    id: revisor
+    attributes:
+      label: Revisor
+      description: Usuario de GitHub del compañero que revisará la rama antes de integrarla.
+      placeholder: "@usuario"
+    validations:
+      required: true
+  - type: textarea
+    id: descripcion
+    attributes:
+      label: Descripción
+      description: Qué hay que hacer y por qué. Si es un error, cómo reproducirlo.
+    validations:
+      required: true
+  - type: textarea
+    id: criterios
+    attributes:
+      label: Criterios de aceptación
+      description: Una casilla por criterio, copiados de la historia de usuario.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
