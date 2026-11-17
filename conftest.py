@@ -23,4 +23,4 @@ def app():
 @pytest.fixture
 def cliente(app):
     """Cliente HTTP falso para hacer peticiones a la app sin arrancar un servidor."""
-    return app.test_client()
+    return app.test_client( )
