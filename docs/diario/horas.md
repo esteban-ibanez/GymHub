@@ -8,7 +8,7 @@ Al final se valora la implicación de cada miembro del 1 al 10, entendida como e
 
 | Miembro | Horas acumuladas | % de 45 h |
 |---|---|---|
-| Esteban Ibáñez Torres | 0 | 0 % |
+| Esteban Ibáñez Torres | 6 | 13 % |
 | Alberto Serrano Martínez | 0 | 0 % |
 | Gonzalo López Torres | 0 | 0 % |
 | Rubén Márquez Ortega | 0 | 0 % |
@@ -19,4 +19,4 @@ Al final se valora la implicación de cada miembro del 1 al 10, entendida como e
 
 | Miembro | Horas | Qué ha hecho | Issues |
 |---|---|---|---|
-| | | | |
+| Esteban Ibáñez Torres | 6 | Esqueleto de la aplicación Flask (en revisión) y acta 2026-02 (integrada en `trunk`) | #2, #3 |
