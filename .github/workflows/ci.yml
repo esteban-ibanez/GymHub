@@ -1,0 +1,36 @@
+# Integración continua: en cada push, a cualquier rama, comprueba el estilo y
+# ejecuta los tests. Si algo falla, la ejecución se pone en rojo en GitHub.
+name: CI
+
+on:
+  push:
+  # Permite lanzarla a mano desde la pestaña Actions («Run workflow»).
+  workflow_dispatch:
+
+jobs:
+  comprobaciones:
+    # Versión fija del sistema, igual que en Docker no usamos nunca "latest".
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Descargar el código
+        uses: actions/checkout@v5
+
+      - name: Instalar Python 3.13
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+          # Guarda los paquetes descargados entre ejecuciones para que sea más rápida.
+          cache: pip
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      # Las mismas tres comprobaciones que hacemos en local antes de integrar.
+      - name: Revisar el código con ruff
+        run: ruff check .
+
+      - name: Revisar el formato con ruff
+        run: ruff format --check .
+
+      - name: Ejecutar los tests
+        run: pytest -q

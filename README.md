@@ -1,5 +1,7 @@
 # GymHub
 
+[![CI](https://github.com/esteban-ibanez/GymHub/actions/workflows/ci.yml/badge.svg)](https://github.com/esteban-ibanez/GymHub/actions/workflows/ci.yml)
+
 Aplicación web para llevar el control de lo que hacemos en el gimnasio: ejercicios, rutinas, sesiones de entreno con temporizador de descanso y progreso. Igual que GitHub guarda el registro de un proyecto, GymHub guarda el registro de tu progreso: cada serie que apuntas es como un *commit* y cada récord, una nueva versión de ti.
 
 Proyecto de la asignatura **Ingeniería del Software** (Grado en Inteligencia Artificial, Universidad de Sevilla, curso 2026/2027). Entrega final: **16/12/2026**.
