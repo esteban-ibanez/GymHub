@@ -20,3 +20,8 @@ Al final se valora la implicación de cada miembro del 1 al 10, entendida como e
 | Miembro | Horas | Qué ha hecho | Issues |
 |---|---|---|---|
 | Esteban Ibáñez Torres | 6 | Esqueleto de la aplicación Flask (en revisión) y acta 2026-02 (integrada en `trunk`) | #2, #3 |
+| Alberto Serrano Martínez | | | |
+| Gonzalo López Torres | | | |
+| Rubén Márquez Ortega | | | |
+| Mario Ronquillo Bernáldez | | | |
+| Antonio Crespo Bravo | | | |
