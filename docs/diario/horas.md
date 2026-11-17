@@ -10,7 +10,7 @@ Al final se valora la implicación de cada miembro del 1 al 10, entendida como e
 |---|---|---|
 | Esteban Ibáñez Torres | 6 | 13 % |
 | Alberto Serrano Martínez | 0 | 0 % |
-| Gonzalo López Torres | 0 | 0 % |
+| Gonzalo López Torres | 5 | 11 % |
 | Rubén Márquez Ortega | 0 | 0 % |
 | Mario Ronquillo Bernáldez | 0 | 0 % |
 | Antonio Crespo Bravo | 0 | 0 % |
@@ -21,7 +21,7 @@ Al final se valora la implicación de cada miembro del 1 al 10, entendida como e
 |---|---|---|---|
 | Esteban Ibáñez Torres | 6 | Esqueleto de la aplicación Flask (en revisión) y acta 2026-02 (integrada en `trunk`) | #2, #3 |
 | Alberto Serrano Martínez | | | |
-| Gonzalo López Torres | | | |
+| Gonzalo López Torres | 5 | Tests base y fixtures (verificados, en revisión) e integración continua con GitHub Actions (integrada en `trunk`) | #4, #5 |
 | Rubén Márquez Ortega | | | |
 | Mario Ronquillo Bernáldez | | | |
 | Antonio Crespo Bravo | | | |
