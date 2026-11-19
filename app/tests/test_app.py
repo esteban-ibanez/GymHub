@@ -20,6 +20,9 @@ def test_pagina_inexistente_devuelve_404_con_plantilla_de_error(cliente):
 
 
 def test_init_db_comprueba_la_conexion_y_crea_las_tablas(app):
+    # La fixture `app` ya crea las tablas; se borran para comprobar que las crea init-db.
+    db.drop_all()
+
     resultado = app.test_cli_runner().invoke(args=["init-db"])
 
     assert resultado.exit_code == 0, resultado.output
