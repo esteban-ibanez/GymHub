@@ -36,9 +36,11 @@ def crear_app(clase_config=Config):
 
 def registrar_blueprints(app):
     """Registra los módulos de app/features/. Cada work item añade aquí el suyo."""
+    from app.features.ejercicios import ejercicios_bp
     from app.features.portada import portada_bp
 
     app.register_blueprint(portada_bp)
+    app.register_blueprint(ejercicios_bp)
 
 
 def registrar_errores(app):

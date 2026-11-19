@@ -10,6 +10,11 @@
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="{{ url_for('portada.inicio') }}">GymHub</a>
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('ejercicios.catalogo') }}">Ejercicios</a>
+        </li>
+      </ul>
     </div>
   </nav>
 
