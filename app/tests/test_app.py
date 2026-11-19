@@ -24,5 +24,4 @@ def test_init_db_comprueba_la_conexion_y_crea_las_tablas(app):
 
     assert resultado.exit_code == 0, resultado.output
     assert "Base de datos lista" in resultado.output
-    # Aún no hay modelos, así que la base de datos sigue sin tablas: es lo esperado.
-    assert inspect(db.engine).get_table_names() == []
+    assert set(inspect(db.engine).get_table_names()) == set(db.metadata.tables)
