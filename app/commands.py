@@ -23,6 +23,18 @@ def init_db():
     click.echo("Base de datos lista: conexión correcta y tablas creadas.")
 
 
+@click.command("seed-db")
+@with_appcontext
+def seed_db():
+    """Carga los datos de ejemplo de cada módulo. Solo para desarrollo: nunca en producción."""
+    # Se importa aquí, y no arriba, para que commands.py no dependa de los módulos al cargarse.
+    from app.features.ejercicios.seeders import cargar_ejercicios_ejemplo
+
+    creados = cargar_ejercicios_ejemplo()
+    click.echo(f"Ejercicios de ejemplo creados: {creados}.")
+
+
 def registrar_comandos(app):
     """Registra los comandos en la aplicación. Lo llama `crear_app()`."""
     app.cli.add_command(init_db)
+    app.cli.add_command(seed_db)

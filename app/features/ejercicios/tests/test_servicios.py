@@ -1,6 +1,8 @@
+import pytest
+
 from app.extensions import db
 from app.features.ejercicios.models import Ejercicio
-from app.features.ejercicios.services import listar_ejercicios
+from app.features.ejercicios.services import crear_ejercicio, listar_ejercicios
 
 
 def anadir_ejercicios(*ejercicios):
@@ -35,3 +37,23 @@ def test_listar_ejercicios_de_un_grupo_sin_ejercicios_devuelve_lista_vacia(app):
     anadir_ejercicios(Ejercicio(nombre="Sentadilla", grupo_muscular="piernas"))
 
     assert listar_ejercicios("cardio") == []
+
+
+def test_crear_ejercicio_guarda_todos_los_datos(app):
+    ejercicio = crear_ejercicio(
+        "Press de banca", "pecho", "tríceps, hombros", "Barra", "Baja la barra al pecho."
+    )
+
+    guardado = db.session.get(Ejercicio, ejercicio.id)
+    assert guardado.nombre == "Press de banca"
+    assert guardado.grupo_muscular == "pecho"
+    assert guardado.musculos_secundarios == "tríceps, hombros"
+    assert guardado.equipamiento == "Barra"
+    assert guardado.descripcion == "Baja la barra al pecho."
+
+
+def test_crear_ejercicio_con_grupo_muscular_no_valido_falla(app):
+    with pytest.raises(ValueError):
+        crear_ejercicio("Remo", "antebrazo")
+
+    assert listar_ejercicios() == []
